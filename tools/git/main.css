@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lato:wght@300&family=Oswald:wght@200&family=Tiro+Devanagari+Sanskrit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+/*  
+font-family: 'Koulen', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Tiro Devanagari Sanskrit', serif;
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Koulen', cursive;
+  background: whitesmoke;
+}
+html{
+  scroll-behavior: smooth;
+}
+nav{
+  background: #222;
+  color: white;
+  text-align: center;
+  letter-spacing: 7px;
+}
+.container{
+  /* border: 1px solid indigo; */
+  box-shadow: 1px 1px 3px gray;
+  padding: 10px 5px;
+  margin: 10px;
+}
+.title{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  /* border-bottom: 1px solid gray; */
+  background: #c9c9c9;
+  color: black;
+  padding: 2px 4px;
+  letter-spacing: 2px;
+}
+code{
+  font-family: 'Lato', sans-serif;
+  color: teal;
+  font-weight: bolder;
+  display: block;
+  margin: 10px 0;
+}
+.info{
+  /* background: black; */
+  color: red;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-size: 10px;
+  /* word-wrap: none; */
+}
+
+.git-config span{
+  display: none;
+}
+.git-config .symbol{
+  display: inline-block;
+}
+.symbol{
+  background: #000;
+  color: white;
+  padding: 2px 4px;
+  margin-right: 5px;
+}
+.author{
+  text-align: center;
+  display: block;
+  margin: 5px 0;
+}

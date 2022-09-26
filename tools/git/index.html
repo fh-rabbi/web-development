@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!--  <meta name="viewport" content="width=700, initial-scale=1">
+--> <title>Git Cheatsheet</title>
+ <link rel="stylesheet" href="main.css" title="" type="" />
+</head>
+<body>
+  <nav class="nav">
+    <h1>Git Cheatsheet</h1>
+  </nav>
+  <div class="container">
+    <section class="git-config">
+      <h2 class="title">01. Git Configuration:</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> git config <span class="info">For config</span></code>
+        <code><span class="symbol">$</span> git config --global user.name "fazle rabbi" <span class="info">For config</span></code>
+        <code><span class="symbol">$</span> git config --global user.email "demo@gmail.com" <span class="info">For config</span></code>
+        <code><span class="symbol">$</span> git config --list <span class="info">For config</span></code>
+        <code><span class="symbol">$</span> git config user.name <span class="info">For config</span></code>
+        <code><span class="symbol">$</span> git config user.email <span class="info">For config</span></code>
+      </div>
+    </section>
+    
+    <section class="git-stage">
+      <h2 class="title">02. Adding files in staging:</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> git add fileName <span class="info">For a specific file</span></code>
+        <code><span class="symbol">$</span> git add . <span class="info">For all file in current dir</span></code>
+        <code><span class="symbol">$</span> git add -A <span class="info">For all file in current dir+subDir</span></code>
+        <code><span class="symbol">$</span> git add *.js <span class="info">For all .js file in current dir</span></code>
+        <code><span class="symbol">$</span> git add **/*.js <span class="info">For all .js file in current dir+subDir</span></code>
+        <code><span class="symbol">$</span> git git rm --cached fileName <span class="info">For unstage</span></code>
+        <code><span class="symbol">$</span> git restore --staged fileName <span class="info">For unstage</span></code>
+        <code><span class="symbol">$</span> git restore fileName <span class="info">For undo changes in staging area</span></code>
+        <code><span class="symbol">$</span> git diff <span class="info">For view changes</span></code>
+      </div>
+    </section>
+    
+    <section class="git-commit">
+      <h2 class="title">03. Commiting and Uncommiting:</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> git commit -m "message" <span class="info">For commit</span></code>
+        <code><span class="symbol">$</span> git log <span class="info">For view commit history</span></code>
+        <code><span class="symbol">$</span> git reset --soft HEAD^ <span class="info">For uncommit and go stageing area</span></code>
+        <code><span class="symbol">$</span> git reset HEAD^ <span class="info">For uncommit</span></code>
+        <code><span class="symbol">$</span> git reset --hard HEAD^ <span class="info">For uncommit+unstage and go working dir</span></code>
+      </div>
+    </section>
+    
+    <section class="git-head">
+      <h2 class="title">04. Head and Undo:</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> git log <span class="info">For view all commit history</span></code>
+        <code><span class="symbol">$</span> git log --oneline <span class="info">For view all commit history in single line </span></code>
+        <code><span class="symbol">$</span> git show <span class="info">For view commit info</span></code>
+        <code><span class="symbol">$</span> git show commit_id <span class="info">For view commit info</span></code>
+        <code><span class="symbol">$</span> git show HEAD~2 <span class="info">For view commit info</span></code>
+        <code><span class="symbol">$</span> git checkout file_name <span class="info">For undo changes in staging area</span></code>
+        
+      </div>
+    </section>
+    
+    <section class="git-ignore">
+      <h2 class="title">05. .gitignore</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> test.txt <span class="info">For ignore test.txt flie</span></code>
+        <code><span class="symbol">$</span> *.txt <span class="info">For ignore all .txt file</span></code>
+        <code><span class="symbol">$</span> !main.txt <span class="info">For ignore all .txt file without this file</span></code>
+        <code><span class="symbol">$</span> text?.txt <span class="info">For ignore all files like text1/text2.txt</span></code>
+        <code><span class="symbol">$</span> temp/ <span class="info">For ignore this folder</span></code>
+      </div>
+    </section>
+    
+    <section class="git-remote">
+      <h2 class="title">06. Remote connecting:</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> git remote <span class="info">For check remote status</span></code>
+        <code><span class="symbol">$</span> git remote -v <span class="info">For check remote status with more info</span></code>
+        <code><span class="symbol">$</span> git remote add origin url <span class="info">For add remote url</span></code>
+      </div>
+    </section>
+    
+    <section class="git-push">
+      <h2 class="title">07. Push and pull:</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> git push -u origin main <span class="info">For push main branch to remote</span></code>
+        <code><span class="symbol">$</span> git push <span class="info">For push local changes to remote</span></code>
+        <code><span class="symbol">$</span> git pull <span class="info">For get remote changes</span></code>
+      </div>
+    </section>
+    
+    <section class="git-branch">
+      <h2 class="title">08. Branching and merging:</h2>
+      <div class="command-list">
+        <code><span class="symbol">$</span> git branch <span class="info">For view all branch</span></code>
+        <code><span class="symbol">$</span> git branch -m new_name <span class="info">For rename a branch</span></code>
+        <code><span class="symbol">$</span> git branch branch_name <span class="info">For create a new branch</span></code>
+        <code><span class="symbol">$</span> git checkout -b branch_name <span class="info">For create and switch a new branch</span></code>
+        <code><span class="symbol">$</span> git checkout branch_name <span class="info">For switch a branch</span></code>
+        <code><span class="symbol">$</span> git branch -d branch_name <span class="info">For delete a branch_name</span></code>
+        <code><span class="symbol">$</span> git push origin branch_name <span class="info">For push a specific branch_name</span></code>
+      </div>
+    </section>
+  </div>
+    <span class="author">Created by <a href="https://github.com/fh-rabbi">Fazle Rabbi</a> &hearts;</span>
+</body>
+</html>
