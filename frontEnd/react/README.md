@@ -1762,9 +1762,90 @@ export default function Demo(){
 <a id="FirestoreDB"/>
 
 ## Firestore Database:
+1. **lib/firebase-config.js**
+```js
+........
+
+// Initialize Firestore 
+export const db = getFirestore(app);
 ```
+2. **lib/cRef.js**
+```js
+import {db} from './firebase-config';
+import { collection } from 'firebase/firestore';
+
+export const cRef = collection(db, 'notes');
 
 ```
+3. **create document:**
+```js
+import { addDoc } from 'firebase/firestore'
+import { cRef } from '../lib/Cref'
+
+async function createNewTodo(){
+    try {
+      await addDoc(cRef, {todo: value})
+      setValue('')
+    } catch (err) {
+      alert(err.message)
+    }
+  }
+```
+4. **read document:**
+```js
+import { db } from '../lib/firebase-config'
+import { getDocs,collection,deleteDoc,doc } from 'firebase/firestore'
+import { cRef } from '../lib/Cref'
+
+async function getTodos(){
+    try {
+      // const cRef = await collection(db, 'todos');
+      const data = await getDocs(cRef);
+      const docs = data.docs.map(doc => {
+        return {
+          id: doc.id,
+          data: doc.data()
+        };
+      });
+      set_test(docs);
+      set_todos(docs);
+    } catch (err) {
+      alert(err.message);
+    }
+  }
+  
+  // delete document:
+  async function deleteTodo(id){
+    try {
+      const docRef = doc(db, 'todos', id);
+      await deleteDoc(docRef)
+      alert('Deleted successfull')
+    } catch (err) {
+      alert(err.message)
+    }
+  }
+```
+5. **update document:**
+```js
+import { updateDoc,doc } from 'firebase/firestore';
+import { db } from '../lib/firebase-config'
+
+async function handleSubmit(event){
+    try {
+      event.preventDefault();
+      if(id === '' && value === ''){
+        return alert('Value couldn\'t be empty!')
+      }
+      const docRef = doc(db, 'todos', id);
+      await updateDoc(docRef, {todo: value});
+      setId('');
+      setValue('');
+    } catch (e) {
+      alert(e.message)
+    }
+  }
+```
+
 
 **[⬆ Back to Top](#Firebase)**
 
