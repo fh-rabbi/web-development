@@ -18,6 +18,7 @@
 * `External Modules`
 * Stream & Buffers
 * Pipe Stream
+* [Getting User Input](#uinput)
 
 ### Local Modules:
 ```js
@@ -180,5 +181,15 @@ const server = http.createServer((req,res)=>{
 server.listen(3000);
 ```
 
+<p id="uinput"></p>
+
+### Getting User Input:
+* **npm i prompt-sync**
+```js
+const prompt = require(prompt-sync)();
+
+const name = prompt("Enter your name:");
+console.log('Hi,'+ name);
+```
 
 
