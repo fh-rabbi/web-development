@@ -1,17 +1,17 @@
 <h1 align="center"><a href="#">MongoDB</a></h1>
 
 ## What is MongoDB?
-> *MongoDB is a document-oriented NoSQL database used for high volume data storage. Instead of using tables and rows as in the traditional relational databases, MongoDB makes use of collections and documents. Documents consist of key-value pairs which are the basic unit of data in MongoDB. Collections contain sets of documents and function which is the equivalent of relational database tables. MongoDB is a database which came into light around the mid-2000s.*
+> ***MongoDB is a document-oriented NoSQL database used for high volume data storage. Instead of using tables and rows as in the traditional relational databases, MongoDB makes use of collections and documents. Documents consist of key-value pairs which are the basic unit of data in MongoDB. Collections contain sets of documents and function which is the equivalent of relational database tables. MongoDB is a database which came into light around the mid-2000s.***
 
 ## What is Mongoose?
 
 > ***Mongoose is a JavaScript object-oriented programming library that creates a connection between MongoDB and the Node.js JavaScript runtime environment.***
 
-### `How to install & use MongoDB in Android`
+### How to install & use MongoDB in Android
 
 * [geeksforgeeks](https://www.geeksforgeeks.org/how-to-install-mongodb-on-android/amp/)
 
-### `Difference between RDBMS & MongoDB`
+### Difference between RDBMS & MongoDB
 
 <div align="center">
 
@@ -27,7 +27,7 @@
 ---
 <h1 align="center"><a href="#">Core Topics</a></h1>
 
-## 1. Create
+## Create Document 
 * obj.save()
 * insertOne()
 * insertMany([])
@@ -55,7 +55,7 @@
   }
   ```
 
-## 2. Read
+## Read Document
 * `.find({})`
 * `.findOne({})`
 * `.select({name: 1})`
@@ -110,7 +110,8 @@
    }
   
   ```
-## 3. Update
+
+## 3. Update Document
 * updateOne(filter,updatedValue)
 * updateMany(filter,updatedValue)
 * findByIdAndUpdate(filter,updatedValue)
@@ -143,7 +144,7 @@
    }    
    ```
 
-## 4. Delete:
+## Delete Document
 * deleteOne(filter)
 * deleteMany(filter)
 * findByIdAndDelete(filter)
