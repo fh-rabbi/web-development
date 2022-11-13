@@ -221,7 +221,14 @@ try {
 
 ### 🔹 Events:
 ```js
+const EventEmitter = require('events');
+const event = new EventEmitter();
 
+event.on('waterFull', (sc) => {
+  console.log('Please turn of the motor! ' + sc );
+})
+
+event.emit('waterFull', 200);
 ```
 [⬆ Back to Top](#top)
 
@@ -245,7 +252,38 @@ console.log(name);
 
 ### 🔹 Streams & Buffers:
 ```js
+const http = require('http');
+const fs = require('fs');
 
+const server = http.createServer((req,res)=>{
+  // Method 1:
+  // fs.readFile('b.txt', 'utf-8', (err,data)=>{
+  //   console.log(data);
+  //   res.end('ok');
+  // })
+  
+  // Method 2:
+  // const rstream = fs.createReadStream('b.txt');        
+  // rstream.on('data', (chunk) => {
+  //   res.write(chunk);
+  //   // console.log(chunk.toString());
+  // })
+  // rstream.on('end', ()=>{
+  //   console.log();
+  //   res.end('End');
+  // })
+  // rstream.on('error', (err)=>{
+  //   console.log(err);
+  //   res.end('Not found');
+  // })
+  
+  // Method 3:
+  const rstream = fs.createReadStream('b.txt');        
+  rstream.pipe(res);
+  
+})
+
+server.listen(3000);
 ```
 [⬆ Back to Top](#top)
 
@@ -253,7 +291,8 @@ console.log(name);
 
 ### 🔹 Pipe Streams:
 ```js
-
+const rstream = fs.createReadStream('b.txt');        
+rstream.pipe(res);
 ```
 [⬆ Back to Top](#top)
 
