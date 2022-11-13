@@ -19,6 +19,8 @@
 * Stream & Buffers
 * Pipe Stream
 * [Getting User Input](#uinput)
+* [Regex](#regex)
+
 
 ### Local Modules:
 ```js
@@ -190,6 +192,31 @@ const prompt = require(prompt-sync)();
 
 const name = prompt("Enter your name:");
 console.log('Hi,'+ name);
+```
+
+<p id="regex"></p>
+
+### Regex:
+```js
+const express = require("express");
+const app = express();
+const PORT = 5000;
+
+app.get('/', (req,res) => {
+   res.send('Hello');
+});
+
+// [0-9][A-Z]+   --> one or more any!
+// [0-9][A-Z]{6} --> required 6 length!
+app.get('/id/:id([0-9A-Z]{6})', (req,res) => {
+   res.send(`Id=${req.params.id}`);
+});
+
+app.listen(PORT, (err)=>{
+   if(!err){
+      console.log('Server started at http://localhost'+PORT);
+   }
+});
 ```
 
 
