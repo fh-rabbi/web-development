@@ -77,45 +77,61 @@ module.exports = {
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
 <p id=""></p>
 
 ### Local Modules:
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
 <p id=""></p>
 
 ### Local Modules:
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
 <p id=""></p>
 
 ### Local Modules:
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
 <p id=""></p>
 
 ### Local Modules:
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
 <p id=""></p>
 
 ### Local Modules:
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
 <p id=""></p>
 
 ### Local Modules:
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
 <p id=""></p>
 
 ### Local Modules:
 ```js
 
 ```
+[⬆ Back to Top](#top)
+
