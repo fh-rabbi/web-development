@@ -111,7 +111,7 @@
   
   ```
 
-## 3. Update Document
+## Update Document
 * updateOne(filter,updatedValue)
 * updateMany(filter,updatedValue)
 * findByIdAndUpdate(filter,updatedValue)
