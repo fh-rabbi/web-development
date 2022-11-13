@@ -32,11 +32,12 @@
 * [Styling Console](#)
 * [Getting User Input](#)
 
+
 ---
 
 <p id=""></p>
 
-#### Local Modules:
+#### 🔹 Local Modules:
 ```js
 // main.js
 const {getAge,demo} = require('./md');
@@ -70,6 +71,7 @@ module.exports = {
   text
 }
 ```
+[⬆ Back to Top](#top)
 
 <p id=""></p>
 
