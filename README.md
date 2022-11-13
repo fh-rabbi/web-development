@@ -50,8 +50,8 @@
 
 ## Tools:
 
-* [🚀 Git](tools/git/git.md) 
-* [🚨 NPM](tools/npm.md)
+* [📌 Git](tools/git/git.md) 
+* [📌 NPM](tools/npm.md)
 
 </div>
 
