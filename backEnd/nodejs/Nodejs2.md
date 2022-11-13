@@ -3,7 +3,7 @@
 </div>
 
 # What is Nodejs
-* *Node.js is an open-source server side runtime environment built on Chrome's V8 JavaScript engine. It provides an event driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side application using JavaScript.*
+* Node.js is an open-source server side runtime environment built on Chrome's V8 JavaScript engine. It provides an event driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side application using JavaScript.
 
 * Node.js can be used to build different types of applications such as command line application, web application, real-time chat application, REST API server etc. However, it is mainly used to build network programs like web servers, similar to PHP, Java, or ASP.NET.
 
@@ -36,7 +36,7 @@
 
 <p id=""></p>
 
-### Local Modules:
+#### Local Modules:
 ```js
 // main.js
 const {getAge,demo} = require('./md');

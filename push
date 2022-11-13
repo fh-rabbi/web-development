@@ -1,0 +1,6 @@
+git add .
+echo -e "\033[1;93m"
+read -p "[*] Write Commit Message:" msg
+git commit -m "$msg"
+git push
+echo -e "\033[1;92m [*] Done."
