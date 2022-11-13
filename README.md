@@ -39,10 +39,10 @@
 
 ## BackEnd:
 
-* [🔧 Node js](backEnd/Nodejs.md)
-* [🛠️ Express js](backEnd/express.md)
-* [🔭 Ejs](backEnd/ejs.md)
-* [🔐 Web Authentication](backEnd/jwt.md)
+* [🔧 Node js](backEnd/nodejs/Nodejs.md)
+* [🛠️ Express js](backEnd/expressjs/express.md)
+* [🔭 Ejs](backEnd/TemplateEngine/ejs.md)
+* [🔐 Web Authentication](backEnd/Authentication/jwt.md)
 
 ## Database:
 
